@@ -12,22 +12,22 @@ Sistemas gerenciadores de banco de dados relacionais (SGBDRs) foram muito popula
 
 ## Palestras
 
-1. Introdu&ccedil;&atilde;o aos sistemas de banco de dados [ (slides: [pdf](slides/sld01.pdf)) ]
-1. Arquitetura de SGBDRs [ (slides: [pdf](slides/sld02.pdf)) ]
-1. Linguagem de consulta estruturada (SQL) [ (slides: [pdf](slides/sld04.pdf)) ]
-1. &Aacute;lgebra relacional [ (slides: [pdf](slides/sld06.pdf)) ]
-1. Modelagem de dados: modelo de Entidade-Relacionamento (ER) [ (slides: [pdf](slides/sld07.pdf)) ]
-1. Modelagem de dados: modelo de Entidade-Relacionamento Estendido (EER) [ (slides: [pdf](slides/sld08.pdf)) ]
-1. Modelagem de dados: modelo relacional [ (slides: [pdf](slides/sld09.pdf)) ]
-1. Armazenamento de dados [ (slides: [pdf](slides/sld17.pdf)) ]
-1. Indexa&ccedil;&atilde;o [ (slides: [pdf](slides/sld18.pdf)) ]
-1. Processamento e otimiza&ccedil;&atilde;o de consultas [ (slides: [pdf](slides/sld19.pdf)) ]
-1. Ajuste de banco de dados [ (slides: [pdf](slides/sld20.pdf)) ]
-1. Processamento de transa&ccedil;&atilde;o [ (slides: [pdf](slides/sld21.pdf)) ]
-1. Controle de concorr&ecirc;ncia [ (slides: [pdf](slides/sld22.pdf)) ]
+1. Introdu&ccedil;&atilde;o aos sistemas de banco de dados [ (slides: [pdf](/slides/sld01.pdf)) ]
+1. Arquitetura de SGBDRs [ (slides: [pdf](/slides/sld02.pdf)) ]
+1. Linguagem de consulta estruturada (SQL) [ (slides: [pdf](/slides/sld04.pdf)) ]
+1. &Aacute;lgebra relacional [ (slides: [pdf](/slides/sld06.pdf)) ]
+1. Modelagem de dados: modelo de Entidade-Relacionamento (ER) [ (slides: [pdf](/slides/sld07.pdf)) ]
+1. Modelagem de dados: modelo de Entidade-Relacionamento Estendido (EER) [ (slides: [pdf](/slides/sld08.pdf)) ]
+1. Modelagem de dados: modelo relacional [ (slides: [pdf](/slides/sld09.pdf)) ]
+1. Armazenamento de dados [ (slides: [pdf](/slides/sld17.pdf)) ]
+1. Indexa&ccedil;&atilde;o [ (slides: [pdf](/slides/sld18.pdf)) ]
+1. Processamento e otimiza&ccedil;&atilde;o de consultas [ (slides: [pdf](/slides/sld19.pdf)) ]
+1. Ajuste de banco de dados [ (slides: [pdf](/slides/sld20.pdf)) ]
+1. Processamento de transa&ccedil;&atilde;o [ (slides: [pdf](/slides/sld21.pdf)) ]
+1. Controle de concorr&ecirc;ncia [ (slides: [pdf](/slides/sld22.pdf)) ]
 1. Recupera&ccedil;&atilde;o de banco de dados [ slides ]
 
-* Todas as palestras em um &uacute;nico arquivo [ (slides: [pdf](slides/all.pdf)) ]
+* Todas as palestras em um &uacute;nico arquivo [ (slides: [pdf](/slides/all.pdf)) ]
 
 ## Material
 
