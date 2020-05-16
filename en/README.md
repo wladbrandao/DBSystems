@@ -12,22 +12,22 @@ Relational database management systems (RDBMS) were very popular in the 80's and
 
 ## Lectures
 
-1. Introduction to database systems [ (slides: [pdf](slides/sld01.pdf)) ]
-1. The architecture of RDBMS [ (slides: [pdf](slides/sld02.pdf)) ]
-1. Structured Query Language (SQL) [ (slides: [pdf](slides/sld04.pdf)) ]
-1. Relational algebra [ (slides: [pdf](slides/sld06.pdf)) ]
-1. Data modeling: Entity-Relationship model (ER) [ (slides: [pdf](slides/sld07.pdf)) ]
-1. Data modeling: Extended Entity-Relationship model (EER) [ (slides: [pdf](slides/sld08.pdf)) ]
-1. Data modeling: relational model [ (slides: [pdf](slides/sld09.pdf)) ]
-1. Data storage [ (slides: [pdf](slides/sld17.pdf)) ]
-1. Indexing [ (slides: [pdf](slides/sld18.pdf)) ]
-1. Query processing and optimization [ (slides: [pdf](slides/sld19.pdf)) ]
-1. Database tuning [ (slides: [pdf](slides/sld20.pdf)) ]
-1. Transaction processing [ (slides: [pdf](slides/sld21.pdf)) ]
-1. Concurrency control [ (slides: [pdf](slides/sld22.pdf)) ]
+1. Introduction to database systems [ (slides: [pdf](/slides/sld01.pdf)) ]
+1. The architecture of RDBMS [ (slides: [pdf](/slides/sld02.pdf)) ]
+1. Structured Query Language (SQL) [ (slides: [pdf](/slides/sld04.pdf)) ]
+1. Relational algebra [ (slides: [pdf](/slides/sld06.pdf)) ]
+1. Data modeling: Entity-Relationship model (ER) [ (slides: [pdf](/slides/sld07.pdf)) ]
+1. Data modeling: Extended Entity-Relationship model (EER) [ (slides: [pdf](/slides/sld08.pdf)) ]
+1. Data modeling: relational model [ (slides: [pdf](/slides/sld09.pdf)) ]
+1. Data storage [ (slides: [pdf](/slides/sld17.pdf)) ]
+1. Indexing [ (slides: [pdf](/slides/sld18.pdf)) ]
+1. Query processing and optimization [ (slides: [pdf](/slides/sld19.pdf)) ]
+1. Database tuning [ (slides: [pdf](/slides/sld20.pdf)) ]
+1. Transaction processing [ (slides: [pdf](/slides/sld21.pdf)) ]
+1. Concurrency control [ (slides: [pdf](/slides/sld22.pdf)) ]
 1. Database recovery [ slides ]
 
-* All the lectures in one single file [ (slides: [pdf](slides/all.pdf)) ]
+* All the lectures in one single file [ (slides: [pdf](/slides/all.pdf)) ]
 
 ## Material
 
