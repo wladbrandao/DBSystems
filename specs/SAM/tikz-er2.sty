@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tikz-er2}[2016/10/16 Entity-relationship diagrams using the Tikz library]
+
+\RequirePackage{tikz}
+\RequirePackage[normalem]{ulem}  % dashed underline
+
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows}
+\usetikzlibrary{fit}
+
+\tikzstyle{every entity} = []
+\tikzstyle{every weak entity} = []
+\tikzstyle{every attribute} = []
+\tikzstyle{every relationship} = []
+\tikzstyle{every link} = []
+\tikzstyle{every isa} = []
+
+\tikzstyle{link} = [>=triangle 60, draw, thick, every link]
+
+\tikzstyle{total} = [link, double, double distance=3pt]
+
+\tikzstyle{entity} = [rectangle, draw, black, very thick, minimum width=6em, minimum height=3em, every entity]
+
+\tikzstyle{weak entity} = [entity, double, double distance=2pt, every weak entity]
+
+\tikzstyle{attribute} = [ellipse, draw, black, very thick,
+minimum width=5em, minimum height=2em, every attribute]
+
+\tikzstyle{multi attribute} = [attribute, double, double distance=2pt]
+
+\tikzstyle{derived attribute} = [attribute, dashed]
+
+\tikzstyle{relationship} = [diamond, draw, black, very thick, minimum width=2em, aspect=1, every relationship]
+
+\tikzstyle{ident relationship} = [relationship, double, double distance=2pt]
+
+\tikzstyle{isa} = [isosceles triangle, isosceles triangle apex angle=60, shape border rotate=-90, draw, black, very thick, minimum size=3em, every isa]
+
+% for text un key attributes
+\newcommand{\key}[1]{\underline{#1}}
+
+% for text in discriminator attributes
+\def\discriminator{\bgroup 
+  \ifdim\ULdepth=\maxdimen  % Set depth based on font, if not set already
+   \settodepth\ULdepth{(j}\advance\ULdepth.4pt\fi
+  \markoverwith{\kern.15em
+  \vtop{\kern\ULdepth \hrule width .3em}%
+  \kern.15em}\ULon}

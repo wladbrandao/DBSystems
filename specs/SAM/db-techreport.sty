@@ -1,0 +1,147 @@
+\ProvidesPackage{db-techreport}[2020/03/29]
+
+% Package option: notipa
+\newif\ifottableau@tipa
+\DeclareOption{tipa}{\ottableau@tipatrue}
+\DeclareOption{notipa}{\ottableau@tipafalse}
+
+% Package option: circledviolations
+\newif\ifottableau@circledviolations
+\DeclareOption{circledviolations}{\ottableau@circledviolationstrue}
+
+% Package option: shadedcells
+\newif\ifottableau@shadedcells
+\DeclareOption{shadedcells}{\ottableau@shadedcellstrue}
+
+% Package option: fingerafter
+\newif\ifottableau@fingerfirst
+\ottableau@fingerfirsttrue
+\DeclareOption{fingerafter}{\ottableau@fingerfirstfalse}
+
+\ExecuteOptions{tipa} % default is tipa
+\ProcessOptions\relax
+
+\RequirePackage{xstring}
+\RequirePackage{amssymb} % provides the asterisks
+\RequirePackage{bbding} % provides \HandRight, etc.
+\RequirePackage{suffix} % provides stared commands
+\RequirePackage{colortbl} % for shading
+\RequirePackage{rotating}
+
+% fancy table and lines
+\RequirePackage{hhline,tabu}
+\newtabulinestyle { dashed=.5pt on 1.5pt  off 1.5pt }
+
+% IPA typesetting macros
+\def\ipa#1{#1}
+\def\ip#1{[#1]}
+\def\ips#1{/#1/}
+\ifottableau@tipa
+	\RequirePackage{tipa}
+	% use TIPA for IPA commands:
+	\def\ipa#1{\textipa{#1}}
+	\def\ip#1{[\textipa{#1}]}
+	\def\ips#1{/\textipa{#1}/}
+\fi
+
+% Control package options inline
+
+\def\TipaOn{\ottableau@tipatrue}
+\def\TipaOff{\ottableau@tipafalse}
+
+\def\CircledViolationsOn{\ottableau@circledviolationstrue}
+\def\CircledViolationsOff{\ottableau@circledviolationsfalse}
+
+\def\ShadingOn{\ottableau@shadedcellstrue}
+\def\ShadingOff{\ottableau@shadedcellsfalse}
+
+\def\FingerBeforeLetter{\ottableau@fingerfirsttrue}
+\def\LetterBeforeFinger{\ottableau@fingerfirstfalse}
+
+
+% Custom Markers
+\newcommand\OptimalMarker{\HandRight}
+\newcommand\ViolationMarker{$\ast$}
+\newcommand\CircledViolationMarker{$\circledast$}
+
+% OT tableaux
+\newcounter{tableaurow}
+
+% Keep track of whether the optimal candidate is optimal
+\newif\ifottableau@optimal
+\def\OptimalOn{\globaldefs=1\ottableau@optimaltrue\globaldefs=0}
+\def\OptimalOff{\globaldefs=1\ottableau@optimalfalse\globaldefs=0}
+\newcommand{\Optimal}{\OptimalMarker\OptimalOn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cell shading commands
+
+% Wholly shaded constraint columns must be specified with the s column type
+\newcolumntype{s}{>{\ShadeTheCell}c}
+
+\def\CellShading{0.9}
+\def\SetCellShading#1{\def\CellShading{#1}}
+\def\ShadeTheCell{\cellcolor[gray]{\CellShading}}
+\def\UnshadeTheCell{\cellcolor[gray]{1}}
+
+\newif\ifottableau@excl
+\def\ExclOff{\globaldefs=1\ottableau@exclfalse\globaldefs=0}
+\def\ExclOn{\globaldefs=1\ottableau@excltrue\globaldefs=0}
+
+% Automatic row lettering
+\newcommand*{\rowletter}{\stepcounter{tableaurow}\alph{tableaurow}. }
+
+% https://tex.stackexchange.com/questions/382843/using-the-tabu-environment-within-a-conditional-within-newenvironment
+\newenvironment{tableau}[1]{\setcounter{tableaurow}{0}%
+			\gdef\ConstraintString{#1}
+			\StrSubstitute{#1}{s}{c}[\NoS]
+			\StrCount{\NoS}{c}[\ConstraintCount]%
+			\ifottableau@fingerfirst % finger first: this is the default
+				\expandafter\@firstoftwo
+			\else % finger second
+				\expandafter\@secondoftwo
+			\fi
+			{\begin{tabu}{|r@{\hspace{4pt}}l@{\hspace{3pt}}l||#1|}} % finger first
+			{\begin{tabu}{|l@{\hspace{2pt}}r@{\hspace{4pt}}l||#1|}} % finger second
+			\hhline{|---||*{\ConstraintCount}{-|}}
+			}{\\\hhline{|---||*{\ConstraintCount}{-|}}\end{tabu}}
+
+% draw two lines after the constraints, one line elsewhere
+\def\properlines{\ifthenelse{\thetableaurow=0}%
+					{\\\hhline{:===::*{\ConstraintCount}{=:}}}%
+					{\\\hhline{|---||*{\ConstraintCount}{-|}}}}
+
+\newcommand\cand[2][]{\OptimalOff\properlines%
+						\ifottableau@fingerfirst \ipa{#1} \else \rowletter \fi%
+						&
+						\ifottableau@fingerfirst \rowletter \else \ipa{#1} \fi%
+						&
+						\ipa{#2}\ExclOff}
+						
+\WithSuffix\newcommand\cand*[2][]{\OptimalOff\properlines%
+									\ifottableau@fingerfirst #1 \else \rowletter \fi%
+									&
+									\ifottableau@fingerfirst \rowletter \else #1 \fi%
+								&#2\ExclOff}
+
+\def\vio#1{&%
+			\ifottableau@circledviolations 
+				\ifottableau@optimal 
+					\StrSubstitute{#1}{*}{\CircledViolationMarker} 
+				\else 
+					\StrSubstitute{#1}{*}{\ViolationMarker} 
+				\fi 
+			\else 
+				\StrSubstitute{#1}{*}{\ViolationMarker}
+			\fi
+		\ifottableau@excl \ifottableau@shadedcells \ShadeTheCell \fi \fi%
+		\ifottableau@excl \empty \else \IfSubStr{#1}{!}{\ExclOn}{\ExclOff} \fi%
+		}
+
+\newcommand\inp[1]{\multicolumn{3}{|l||}{#1}}
+
+\newcommand\const[1]{&\textsc{#1}\UnshadeTheCell}
+\WithSuffix\newcommand\const*[1]{&#1\UnshadeTheCell}
+
+% 2017-07-22: This doesn't work for some reason if it's toward the top of the file
+\newcolumntype{:}{|[dashed]}

@@ -1,0 +1,106 @@
+\usepackage{stackengine}
+\usepackage{multirow}
+\usepackage[margin=1in]{geometry}
+\usepackage{ulem}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref} %smarter cross-references, these options turn links blue
+
+\usepackage[parfill]{parskip}
+\setlength{\parskip}{5pt} %plus 1 minus 1}
+\setlength{\parindent}{30pt}
+\usepackage{titlesec}
+\usepackage{fourier-orns}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{leipzig}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{db-techreport}
+\usepackage[no-math]{fontspec}
+\usepackage{libertine}
+\usepackage{color, soul}
+\usepackage[linguistics]{forest}
+
+\forestset{
+  nice nodes/.style={
+    for tree={
+      inner sep=0pt,
+      fit=band,
+    },
+  },
+  default preamble=nice nodes,
+}
+
+\usepackage{gb4e}
+
+\makeatletter
+\def\@maketitle{\parfillskip=0pt
+\noindent {\Large \bfseries \color{black} \@title}  \\ \hrule \noindent \@author \hfill \@date \par \vskip 1cm
+}
+
+\usepackage{tikz}
+\newcommand{\circled}[1]{\begin{tikzpicture}[baseline=(word.base)]
+\node[draw, rounded corners, text height=8pt, text depth=2pt, inner sep=2pt, outer sep=0pt, use as bounding box] (word) {#1};
+\end{tikzpicture}
+}
+
+\RequirePackage{leipzig}
+\RequirePackage{xspace}
+\xspaceaddexceptions{]\}}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand{\nothing}{$\emptyset$}
+
+\newcommand{\1}{\rlap{$'$}\xspace}
+\newcommand{\0}{\rlap{\textsuperscript{$ˆ{\circ}$}}\xspace}
+\newcommand{\Lb}[1]{$\text{[}_{\text{#1}}$ } %A more convenient left bracket
+\newcommand{\Rb}[1]{$\text{]}_{\text{#1}}$ } %A more convenient left bracket
+\newcommand{\gap}{\underline{\hspace{1.2em}}}
+\newcommand{\vP}{\emph{v}P}
+\newcommand{\lilv}{\emph{v}}
+\newcommand{\Abar}{A$'$-} %A more convenient A-bar notation
+\newcommand{\ph}{$\varphi$\xspace} %A more convenient phi
+\newcommand{\pro}{\emph{pro}\xspace}
+\newcommand{\subs}[1]{\textsubscript{#1}} %A more convenient subscript
+%\newcommand{\hd}{$^{\circ}$\xspace} %Symbol for printing head / degree symbol
+\newcommand{\spells}{$\Longleftrightarrow$} %spellout arrow for morph spellout rules
+\newcommand{\tr}[1]{\textit{t}\textsubscript{\textit{#1}}} %easy traces with subscript
+\newcommand{\supers}[1]{\textsuperscript{#1}}
+
+% Abbreviations for glossing, based on Leipzig
+\newleipzig{hab}{hab}{habitual}
+\newleipzig{rem}{rem}{remote}
+\newleipzig{sm}{sm}{subject marker}
+\newleipzig{t}{t}{tense}
+\newleipzig{aa}{aa}{anti-agreement}
+\newleipzig{pron}{pron}{pronoun}
+\newleipzig{rec}{rec}{recent}
+\newleipzig{om}{om}{object marker}
+%\newleipzig{ipfv}{ipfv}{imperfective}
+\newleipzig{asp}{asp}{aspect}
+\newleipzig{lk}{lk}{linker}
+\newleipzig{pcl}{pcl}{particle}
+\newleipzig{stat}{stat}{stative}
+\newleipzig{ints}{ints}{intensive}
+\newleipzig{ascl}{ascl}{assertive subject clitic}
+\newleipzig{nascl}{nascl}{non-assertive subject clitic}
+\newleipzig{ta}{ta}{tense and/or aspect}
+\newleipzig{assoc}{assoc}{associative marker}
+\newleipzig{hon}{hon}{honorific}
+%\newleipzig{whprt}{wh}{\wh particle}
+\newleipzig{sa}{sa}{subject agreement}
+\newleipzig{conj}{conj}{conjunction}
+%\newleipzig{loc}{loc}{locative}
+\newleipzig{expl}{expl}{expletive}
+\newleipzig{rcm}{rcm}{reciprocal marker}
+\newleipzig{pers}{pers}{persistive}
+
+\usepackage{phonrule}
+\usepackage{textgreek}
+
+%\usepackage{metalogo}

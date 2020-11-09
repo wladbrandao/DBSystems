@@ -1,0 +1,23 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tikz-rm}[2016/10/16 Relational model diagrams using the Tikz library]
+
+\RequirePackage{tikz}
+\RequirePackage[normalem]{ulem}  % dashed underline
+
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows}
+\usetikzlibrary{fit}
+
+\tikzstyle{every relation} = []
+\tikzstyle{every attribute} = []
+\tikzstyle{every link} = []
+
+\tikzstyle{rmlink} = [>=triangle 60, draw, thick, every link]
+
+\tikzstyle{rmattribute} = [rectangle, draw, black, very thick, minimum width=6em, minimum height=2em, every attribute]
+
+\tikzstyle{rmrelation} = [rectangle, draw, white, very thick,
+minimum width=5em, minimum height=2em, every relation]
+
+% for text un key attributes
+\newcommand{\rmkey}[1]{\underline{#1}}
