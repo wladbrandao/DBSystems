@@ -1,6 +1,6 @@
 # NoSQL: Tipos
 
-Nesta seção são apresentadas as principais características dos bancos de dados NoSQL.
+Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, incluindo os bancos de dados orientados a documentos, chave-valor, orientados a colunas e os baseados em grafos.
 
 <p align="center">
 <img width="700" vspace="20" src="images/NoSQLTypes.png">

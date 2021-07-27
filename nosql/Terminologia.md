@@ -1,6 +1,6 @@
 # NoSQL: Terminologia
 
-Nesta seção são apresentados os principais termos e respectivos conceitos relacionados ao tópico de bancos de dados NoSQL. Tais elementos fornecem base teórica necessária para a compreensão de informação relevante apresentada no decorrer do curso.
+Nesta seção são apresentados os principais termos e respectivos conceitos relacionados ao tópico de bancos de dados NoSQL. Tais elementos fornecem base teórica necessária para a compreensão de conteúdo relevante apresentada no decorrer do curso.
 
 
 ## Do Dado à Sabedoria
@@ -18,7 +18,7 @@ Nesta seção são apresentados os principais termos e respectivos conceitos rel
 
 - **BANCO DE DADOS:** Conjunto organizado de dados;
 - **MODELO DE DADOS:** Arcabouço conceitual que descreve a forma como os dados são organizados e tratados. Por exemplo, no modelo de dados relacional os dados são organizados de forma tabular com cada tabela representando uma entidade do mundo real, suas colunas representando propriedades da entidade e cada linha representando uma instância da entidade;
-- **SISTEMA GERENCIADOR DE BANCO DE DADOS:** Conjunto de softwares e aplicativos utilizados para manter o bancos de dados;
+- **SISTEMA GERENCIADOR DE BANCO DE DADOS:** Conjunto de softwares e aplicativos utilizados para manter o banco de dados;
 - **SISTEMA DE BANCO DE DADOS:** Unidade constituída por bancos de dados, modelo de dados e sistema gerenciador de banco de dados;
 - **ESQUEMA DE DADOS:** Coleção de metadadados construídos *a priori* para descrever um banco de dados contendo seus entidades, relacionamentos e restrições. Por exemplo, no modelo de dados relacional uma tabela representando uma entidade  pode ser reconhecida pelo rótulo *Empresa* formada pelas colunas *Nome* e *Endereço* com a restrição de serem constituídas apenas por cadeias de caracteres;
 - **LINGUAGEM DE CONSULTA:** Linguagem formal utilizada por usuários e aplicações para especificar consultas a serem submetidas aos sistemas de banco de dados;
