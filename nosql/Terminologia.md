@@ -26,8 +26,8 @@ Nesta seção são apresentados os principais termos e respectivos conceitos rel
 
 ## *Big Data* e *NoSQL*
 
-- ***BIG DATA:*** Termo genérico utilizado recentemente para descrever um volume massivo de dados multivariados e de alta dimensionalidade comumente gerados em tempo real com velocidade de crescimento exponencial;
-- ***NoSQL:*** Considera-se um banco de dados NoSQL a solução de sistemas de banco de dados que não fazem uso do modelo relacional para armazenamento persistente de volumes massivos de dados (*big data*). Muitas dessas soluções operam em *cluster* computacional e sem um esquema de dados predefinido.
+- ***BIG DATA:*** Termo genérico utilizado recentemente para descrever um volume massivo de dados multivariados e de alta dimensionalidade, comumente gerados em tempo real com velocidade de crescimento exponencial;
+- ***NoSQL:*** Considera-se um banco de dados NoSQL a solução de sistemas de banco de dados que não faz uso do modelo relacional para armazenamento persistente de volumes massivos de dados (*big data*). Muitas dessas soluções operam em *cluster* computacional e sem um esquema de dados predefinido.
 
 ## Refer&ecirc;ncias
 
