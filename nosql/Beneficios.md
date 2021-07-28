@@ -3,13 +3,13 @@
 Nesta seção são apresentadas as principais características dos bancos de dados NoSQL.
 
 
-## Agregados
+## Capacidade de Armazenamento
 
-## Liberdade de Esquema
+## Desempenho de Processamento
 
-## Distribuição de Dados
+## Alta Disponibilidade
 
-## Relaxamento ACID
+## Tolerância a Falhas
 
 ## Versionamento de Dados
 
