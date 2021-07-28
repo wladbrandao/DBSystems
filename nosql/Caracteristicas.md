@@ -34,7 +34,7 @@ A obtenção de consistência de dados pressupõe o sacrifício de outras caract
 O teorema CAP é geralmente usado como justificativa para a necessidade de relaxamento da consistência. A afirmação básica do teorema CAP é que, dadas três propriedades, consistência (*Consistency*), disponibilidade (*Availability*) e tolerância de partição (*Partition tolerance*), um sistema só pode obter duas dessas propriedades. Na figura abaixo observa-se que enquanto os sistemas gerenciadores de banco de dados relacionais garantem consistência e disponibilidade, não garantem tolerância de partição, enquanto alguns sistemas de banco de dados NoSQL, como *HBase*, *MongoDB* e *Redis* garantem consistência e tolerância de partição, mas não garantem disponibilidade.
 
 <p align="center">
-<img width="700" vspace="20" src="images/cap02.png">
+<img width="350" vspace="20" src="images/cap02.png">
 </p>
 
 Por consistência entenda-se a capacidade do sistema evitar que erros ocorram, em particular erros de leitura e escrita acidental de dados indesejados. Mais especificamente, todos os nós de um *cluster* computacional enxergam o mesmo dado no mesmo instante de tempo. Por disponibilidade entenda-se a capacidade de um nó ativo de um *cluster* computacional ler e gravar dados. Mais especificamente, requisições válidas de dados são sempre respondidas por um nó. E por tolerância de partição entenda-se a capacidade do *cluster* computacional se manter ativo em caso de falhas de comunicação. Mais especificamente, falhas de comunicação não impedem a troca de mensagens entre os nós.
