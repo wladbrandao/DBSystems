@@ -26,8 +26,7 @@ Este tipo de banco de dados armazena e recupera documentos de diferentes formato
 
 ## Coluna (*Wide-Column* / *Column-Family*)
 
-Bancos de dados de famílias de colunas armazenam dados em famílias de colunas como linhas que possuem muitas colunas associadas com uma chave de linha. Famílias de colunas são grupos de dados relacionados que são frequentemente acessados conjuntamente. No exemplo apresentado abaixo o valor de chave **101** está associado a uma família de colunas **email**, **name** e **tel**, enquanto o valor de chave **103** está associado a uma família de colunas **email**, **name**, **tel** e **tel2**.
-Alguns dos bancos de dados NoSQL do tipo documento mais populares são [Cassandra](http://cassandra.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb), [HBase](http://hbase.apache.org/) e [Hypertable](http://hypertable.org/).
+Bancos de dados de famílias de colunas armazenam dados em famílias de colunas como linhas que possuem muitas colunas associadas com uma chave de linha. Famílias de colunas são grupos de dados relacionados que são frequentemente acessados conjuntamente. No exemplo apresentado abaixo o valor de chave *1234* está associado a duas famílias de colunas, *profile* e *orders*. A família de colunas *profile* possui um conjunto de pares chave-valor, composto pelas chaves *name*, *billingAddress* e *payment* e seus respectivos valores. Alguns dos bancos de dados NoSQL do tipo documento mais populares são [Cassandra](http://cassandra.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb), [HBase](http://hbase.apache.org/) e [Hypertable](http://hypertable.org/).
 
 <p align="center">
 <img width="500" vspace="20" src="images/ColumnFamily.png">
@@ -35,11 +34,11 @@ Alguns dos bancos de dados NoSQL do tipo documento mais populares são [Cassandr
 
 ## Grafo (*Graph*)
 
-Bancos de dados orientados a grafos permitem armazenar entidades (nós) e relacionamentos (arestas) entre essas entidades, bem como suas propriedades. Arestas podem ser direcionais e tipificadas. No exemplo abaixo, os nós 1 e 2 possuem as propriedades *name* e *age* e estão relacionadas pela aresta *knows* com propriedade *weight* de valor *0.5*. A direção da aresta representa que o nó 1 *conhece* o nó 2, mas o nó 2 não *conhece* o nó 1.
+Bancos de dados orientados a grafos permitem armazenar entidades (nós) e relacionamentos (arestas) entre essas entidades, bem como suas propriedades. Arestas podem ser direcionais e tipificadas. No exemplo abaixo, os nós *BigCo* e *Anna* estão relacionadas pela aresta *employer*. A direção da aresta representa que o nó *Anna* é empregado do nó *BigCo*, mas o nó *BigCo* não é empregado do nó *Anna*.
 Alguns dos bancos de dados orientados a grafos mais populares são [FlockDB](https://github.com/twitter/flockdb/), [Infinite Graph](http://www.infinitegraph.com/), [Neo4J](http://neo4j.org/) e [OrientDB](http://www.orientdb.org/).
 
 <p align="center">
-<img width="500" vspace="20" src="images/Graph.jpg">
+<img width="500" vspace="20" src="images/Graph.png">
 </p>
 
 ## Refer&ecirc;ncias

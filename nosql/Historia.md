@@ -14,6 +14,10 @@ A capacidade de **integração de dados** e de **controle de redundância** tamb
 
 Apesar de todas essas características marcantes, o problema da **impedância** permanece. A organização tabular proveniente do modelo relacional traz simplicidade e elegância para a organização e recuperação de dados, mas impõe limitações quanto ao desempenho, comparado aos bancos de dados em memória, e considerando o formato dos dados recuperados, ou seja, tuplas simples sem a possibilidade de retornar estruturas complexas como listas ou registros aninhados. Tal problema tentou ser contornado a partir do uso de abordagens para mapeamento de dados relacionais para dados orientados a objeto, mas o problema persistiu.
 
+<p align="center">
+<img width="700" vspace="20" src="images/impedance.png">
+</p>
+
 Adicionalmente ao problema de impedância, recentemente, e especialmente com o advindo da Web, o volume de dados se tornou massivo, demandando uma **escalabilidade** na arquitetura de processamento de dados sem precedentes. Aumentar a escala implica em máquinas com maior capacidade de processamento e de armazenamento em disco e memória. Mas escalar o processamento nessas máquinas fica cada vez mais caro, além de existirem limites reais para processamento usando uma única máquina. Uma alternativa viável é usar várias máquinas com capacidade limitada de processamento em uma arquitetura de *cluster*. Um *cluster* de "pequenas" máquinas pode usar hardware comum, o que acaba tornando mais barato o tratamento do problema de escalabilidade. Essa arquitetura de *cluster* é também mais resiliente, uma vez que falhas de máquinas individuais são comuns, enquanto o *cluster* pode ser configurado para manter o processamento mesmo em caso de falhas individuais, fornecendo alta
 **confiabilidade**.
 
@@ -23,4 +27,10 @@ Recentemente, muito impulsionada por empresas de alta tecnologia como Amazon, Fa
 
 ## NoSQL
 
-O termo NoSQL apareceu pela primeira vez na literatura nomeando um banco de dados relacional de código aberto que não utilizava SQL como linguagem de consulta. O uso do termo NoSQL como conhecido hoje remonta ao nome de um evento organizado em 2009 para discutir o surgimento de novas soluções de código aberto não relacionais para armazenamento de dados distribuídos em *cluster*. Atualmente considera-se banco de dados NoSQL as soluções não relacionais para armazenamento persistente de volumes massivos de dados, muitas guardando algumas características comuns, como operação em *cluster* sem um esquema de dados predefinido.
+O termo NoSQL apareceu pela primeira vez na literatura nomeando um banco de dados relacional de código aberto que não utilizava SQL como linguagem de consulta. O uso do termo NoSQL como conhecido hoje remonta ao nome de um evento, na verdade da *hashtag* usada para marcar o evento, organizado em 2009 para discutir o surgimento de novas soluções de código aberto não relacionais para armazenamento de dados distribuídos em *cluster*, denominado *NoSQL Meetup*.
+
+<p align="center">
+<img width="700" vspace="20" src="images/nosqlmeetup.png">
+</p>
+
+Não há uma definição precisa do que seja um banco de dados NoSQL, mas atualmente considera-se banco de dados NoSQL as soluções não relacionais para armazenamento persistente de volumes massivos de dados, muitas guardando algumas características comuns, como operação em *cluster* sem um esquema de dados predefinido.

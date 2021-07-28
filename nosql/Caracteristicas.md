@@ -7,14 +7,17 @@ Nesta seção são apresentadas as principais características dos bancos de dad
 
 Agregado é um termo com origem no campo de Projeto Dirigido por Domínio (*Domain-Driven Design*) \[[2](#Evans-2004-BOOK)\], remetendo a uma coleção de objetos relacionados tratados como uma unidade, um bloco único de objetos. Em particular, é uma unidade para manipulação de dados e gerenciamento de consistência.
 
+<p align="center">
+<img width="700" vspace="20" src="images/aggregate.png">
+</p>
+
 O modelo relacional divide dados em tuplas, ou linhas em um estrutura tabular limitada que não permite aninhamento de tuplas ou mesmo a colocação de uma lista de valores ou tuplas dentro de outra. Já a orientação por agregados adota uma abordagem diferente, reconhecendo que muitas vezes os dados precisam ser tratados como unidades que possuem uma estrutura mais complexa do que um conjunto de tuplas.
 
 Ao se flexibilizar as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade) mantendo-as apenas intra-agregados, os agregados podem ser usados como a unidade mínima, indivisível na hora de se fazer *sharding* ou replicação, ou seja, cada *shard* ou nó replicador contém agregados inteiros, ou ainda cada agregado fica armazenado em um, e apenas um nó.
 
 ## Liberdade de Esquema
 
-Antes mesmo de armazenar dados em um banco de dados relacional é necessário definir um esquema, especificando quais tabelas e colunas existem e quais tipos de dados cada coluna pode
-armazenar. Em bancos de dados NoSQL, o armazenamento de dados é muito mais casual, não necessitando de um esquema predeterminado. Em um banco de dados NoSQL chave-valor por exemplo, é possível armazenar quaisquer dados binários diferentes desde que estejam associados a uma chave. O mesmo princípio ocorre com bancos de dados NoSQL orientados a documentos ou a colunas e baseados em grafos.
+Antes mesmo de armazenar dados em um banco de dados relacional é necessário definir um esquema explicitamente, especificando quais tabelas e colunas existem e quais tipos de dados cada coluna pode armazenar. Em bancos de dados NoSQL, o armazenamento de dados é muito mais casual, não necessitando de um esquema explicitamente predeterminado. Em um banco de dados NoSQL chave-valor por exemplo, é possível armazenar quaisquer dados binários diferentes desde que estejam associados a uma chave. O mesmo princípio ocorre com bancos de dados NoSQL orientados a documentos ou a colunas e baseados em grafos.
 
 A ausência de esquema provê mais liberdade e flexibilidade sem a necessidade de se especificar com antecedência a estrutura do que se quer armazenar, o que pode ser difícil em algumas ocasiões. Sem uma associação de esquema é possível facilmente armazenar o que se precisa, podendo alterar facilmente o armazenamento de dados à medida que se aprende mais sobre o projeto. É possível facilmente adicionar coisas novas à medida que as descobre. Além disso, ao descobrir que não se precisa mais de algumas coisas, pode-se simplesmente parar de armazená-las, sem se preocupar com a perda de dados antigos como faria se excluísse colunas em um esquema relacional.
 
@@ -24,6 +27,10 @@ Uma característica marcante e que desperta grande interesse em bancos de dados 
 
 A orientação por agregados é adequada para obtenção de escalabilidade uma vez que agregados são unidades naturais a serem usadas para distribuição. Dependendo do modelo de distribuição, pode-se obter a capacidade de lidar com grandes quantidades de dados, a capacidade de processar um maior tráfego de leitura ou gravação, ou mesmo maior disponibilidade em caso de lentidão ou problemas com o tráfego de rede. No entanto, tais benefícios têm um custo. Executar sobre um *cluster* representa complexidade e não é útil a menos que
 os benefícios sejam atraentes.
+
+<p align="center">
+<img width="700" vspace="20" src="images/distributed.png">
+</p>
 
 De forma geral, existem duas estratégias para a distribuição de dados: replicação (*replication*) e fragmentação (*sharding*). A replicação copia o mesmo conjunto de dados em vários nós. A fragmentação distribui dados diferentes em nós diferentes. Replicação e fragmentação são técnicas ortogonais, podendo-se usar uma ou ambas. A replicação pode ser implementada de duas formas, numa arquitetura mestre-escravo ou ponto a ponto. Basicamente, do mais simples para o mais complexo pode-se ter uma arquitetura de servidor único, replicação mestre-escravo, fragmentação e, replicação ponto a ponto.
 
