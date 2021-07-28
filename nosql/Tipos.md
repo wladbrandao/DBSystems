@@ -8,7 +8,7 @@ Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, in
 
 ## Chave-Valor (*Key-Value*)
 
-Bancos de dados chave-valor são geralmente implementados usando tabelas hash e são muito eficientes quando o acesso aos dados (valores) são efetuados exclusivamente por uma chave (primária). Os valores associados a cada chave podem assumir qualquer valor blob (*binary object*). No exemplo abaixo, o valor associado à chave de *id: 23811445* contém uma coleção de caracteres (*hello*), números (*213* e *0.15*) e um objeto binário.
+Bancos de dados chave-valor são geralmente implementados usando tabelas hash e são muito eficientes quando o acesso aos dados (valores) são efetuados exclusivamente por uma chave (primária). Os valores associados a cada chave podem assumir qualquer valor blob (*binary object*). No exemplo abaixo, o valor associado à chave *2398240* contém uma string de valor *Lorem ipsum dolor sit amet*, enquanto o valor associado à chave *2398242* contém o valor numérico *42*.
 
 Alguns dos bancos de dados NoSQL do tipo chave-valor mais populares atualmente são [BerkeleyDB](http://www.oracle.com/us/products/database/berkeley-db), [DynamoDB](http://aws.amazon.com/dynamodb), [HamsterDB](http://hamsterdb.com/), [MemcachedDB](http://memcached.org/), [Redis](http://redis.io/), [Riak](http://wiki.basho.com/Riak.html), e [Voldemort](http://project-voldemort.com/), uma versão de código aberto do DynamoDB.
 
