@@ -81,5 +81,11 @@ No exemplo acima, diversas aplicações de função *map* são executadas em nó
 
 <a name="Evans-2004-BOOK"></a>\[[2][2]\] Eric Evans. Domain-Driven Design. Addison-Wesley. 2004.
 
+<a name="Fowler-2012-VIDEO01"></a>\[[3][3]\] Martin Fowler. Introduction to NoSQL: NoSQL and consistency, 2012.
+
+<a name="Fowler-2012-VIDEO02"></a>\[[4][4]\] Martin Fowler. Introduction to NoSQL: CAP theorem, 2012.
+
 [1]: https://doi.org/10.5555/2381014
 [2]: https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
+[3]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1547s
+[4]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=2428s

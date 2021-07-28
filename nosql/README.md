@@ -6,11 +6,14 @@ Sistemas de banco de dados NoSQL prov&ecirc;m flexibilidade e alto desempenho no
 
 ## Material
 
-1. [introduction to MySQL by Martin Fowler](https://youtu.be/qI_g07C_Q5I)
+### Videos
+
+1. [Introduction to MySQL](https://youtu.be/qI_g07C_Q5I)  by Martin Fowler
 
 ### Outros Recursos
 
 1. [Cassandra](https://cassandra.apache.org/)
+1. [HBase](https://hbase.apache.org/)
 1. [MongoDB](https://www.mongodb.com/)
 1. [Neo4J](https://neo4j.com/)
 1. [Redis](https://redis.io/)

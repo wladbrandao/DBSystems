@@ -41,8 +41,20 @@ Alguns dos bancos de dados orientados a grafos mais populares são [FlockDB](htt
 <img width="500" vspace="20" src="images/Graph.png">
 </p>
 
-## Refer&ecirc;ncias
+# Refer&ecirc;ncias
 
 <a name="Sadalage-2013-BOOK"></a>\[[1][1]\] Pramod J. Sadalage, Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. 1ed. Pearson, 2013.
 
+<a name="Fowler-2012-VIDEO01"></a>\[[2][2]\] Martin Fowler. Introduction to NoSQL: Key-value data model, 2012.
+
+<a name="Fowler-2012-VIDEO02"></a>\[[3][3]\] Martin Fowler. Introduction to NoSQL: Document data model, 2012.
+
+<a name="Fowler-2012-VIDEO03"></a>\[[4][4]\] Martin Fowler. Introduction to NoSQL: Column-family data model, 2012.
+
+<a name="Fowler-2012-VIDEO04"></a>\[[5][5]\] Martin Fowler. Introduction to NoSQL: Graph data model, 2012.
+
 [1]: https://doi.org/10.5555/2381014
+[2]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=604s
+[3]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=637s
+[4]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1056s
+[5]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1220s
