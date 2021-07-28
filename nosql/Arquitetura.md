@@ -1,19 +1,13 @@
-# NoSQL: Tipos
+# NoSQL: Arquitetura
 
 Nesta seção são apresentadas as principais características dos bancos de dados NoSQL.
 
-<p align="center">
-<img width="700" vspace="20" src="images/Types.png">
-</p>
+## Servidor Único (*Single Server*)
 
-## Chave-Valor
+## Fragmentação (*Sharding*)
 
-## Documento
+## Replicação Mestre-Escravo (*Master-Slave*)
 
-## Família de Colunas
+## Replicação Ponto-a-Ponto (*Peer-to-Peer*)
 
-## Grafo
-
-## Versionamento de Dados
-
-## Processamento Distribuído
+## Fragmentação + Replicação
