@@ -11,6 +11,4 @@ Nesta seção são apresentadas as principais características dos bancos de dad
 
 ## Tolerância a Falhas
 
-## Versionamento de Dados
-
-## Processamento Distribuído
+## Poliglotismo (*Polyglot Persistence*)
