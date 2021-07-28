@@ -13,6 +13,10 @@ Embora muitos bancos de dados NoSQL sejam projetados para execução em *cluster
 Freqüentemente, um banco de dados tem sua disponibilidade comprometida porque diferentes pessoas estão acessando simultaneamente partes diferentes do banco de dados. Nessa situação, a distribuição de partes diferentes dos dados em
 servidores diferentes, uma técnica denominada fragmentação, faz todo sentido para oferecer suporte à escalabilidade horizontal. Assim, o volume de requisições e processamento é distribuído entre os nós, diminuindo a pressão por processamento em um único nó específico.
 
+<p align="center">
+<img width="700" vspace="20" src="images/sharding.png">
+</p>
+
 A fragmentação é particularmente eficiente para operações de escrita no banco de dados, uma vez que os dados são fragmentados e escritos paralelamente em nós diferentes. Entretanto a fragmentação pouco contribui para a resiliência (capacidade de tolerância a falhas) do sistema, uma vez que parte dos dados ficará indisponível caso o nó que armazene os dados se torne indisponível.
 
 ## Replicação Mestre-Escravo (*Master-Slave*)
