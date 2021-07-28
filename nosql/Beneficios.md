@@ -43,3 +43,9 @@ problemas essencialmente diferentes e a utilização de uma mesma solução de a
 Aplicações complexas combinam diferentes tipos de problemas, sendo que um mesmo problema pode requerer diferentes mecanismos de armazenamento, cada um capaz de lidar com diferentes subproblemas. Dessa forma, escolher a solução de armazenamento correta para cada subproblema pode ser mais produtivo do que tentar encaixar todos os subproblemas em uma única solução de armazenamento.
 
 Bancos de dados NoSQL oferecem uma miríade de soluções de armazenamento capazes de lidar com problemas de naturezas diferentes que demandem por exemplo o armazenamento de pares de valores, documentos ou grafos, o que enriquece as opções disponíveis para além da escolha de uma opção relacional única para toda sorte de problema.
+
+# Refer&ecirc;ncias
+
+<a name="Sadalage-2013-BOOK"></a>\[[1][1]\] Pramod J. Sadalage, Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. 1ed. Pearson, 2013.
+
+[1]: https://doi.org/10.5555/2381014
