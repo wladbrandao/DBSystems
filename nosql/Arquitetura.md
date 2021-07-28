@@ -43,3 +43,7 @@ Do ponto de vista de resiliência, essa configuração apresenta desempenho exce
 
 Para obtenção do balanceamento entre resiliência oferecida pela replicação e eficiência oferecida pela fragmentação uma escolha óbvia é a combinação dessas duas arquiteturas em uma arquitetura híbrida.
 Enquanto a combinação de fragmentação e replicação ponto-a-ponto são muito comuns em bancos de dados NoSQL orientados por colunas, a combinação de fragmentação e replicação mestre-escravo é mais comum em bancos de dados NoSQL orientados por documentos ou chave-valor.
+
+<p align="center">
+<img width="500" vspace="20" src="images/replshard.png">
+</p>
