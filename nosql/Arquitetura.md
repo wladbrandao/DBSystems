@@ -47,3 +47,12 @@ Enquanto a combinação de fragmentação e replicação ponto-a-ponto são muit
 <p align="center">
 <img width="500" vspace="20" src="images/replshard.png">
 </p>
+
+# Refer&ecirc;ncias
+
+<a name="Sadalage-2013-BOOK"></a>\[[1][1]\] Pramod J. Sadalage, Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. 1ed. Pearson, 2013.
+
+<a name="Fowler-2012-VIDEO"></a>\[[2][2]\] Martin Fowler. Introduction to NoSQL: Definition of NoSQL, 2012.
+
+[1]: https://doi.org/10.5555/2381014
+[2]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=471s
