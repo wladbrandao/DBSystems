@@ -23,4 +23,4 @@ Sistemas de banco de dados relacionais referem-se aos sistemas compostos por ban
 
 ## Sistemas de Banco de Dados NoSQL
 
-Sistemas de banco de dados NoSQL referem-se aos sistemas compostos por bancos de dados que não adotam um modelo de dados relacional para armazenamento persistente de volumes massivos de dados (*big data*), sendo muitas vezes utilizados para superar as barreiras de escalabilidade e impedância presentes nos sistemas de banco de dados relacionais. Muitos desses sistemas operam em *cluster* computacional e sem um esquema de dados predefinido.
+Sistemas de banco de dados NoSQL referem-se aos sistemas compostos por bancos de dados que não adotam um modelo de dados relacional para armazenamento persistente de volumes massivos de dados (*big data*), bem como pelo software gerenciador do banco de dados capaz de armazenar e processar dados não relacionais de forma segura e com alto desempenho. Estes sistemas são muitas vezes utilizados para superar as barreiras de escalabilidade e impedância presentes nos sistemas de banco de dados relacionais. Muitos deles operam em *cluster* computacional e sem um esquema de dados predefinido.
