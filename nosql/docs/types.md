@@ -3,7 +3,7 @@
 Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, incluindo os bancos de dados orientados a documentos (**document store**), chave-valor (**key-value store**), orientados a colunas (**wide column store**) e os baseados em grafos (**graph store**).
 
 <p align="center">
-<img width="700" vspace="20" src="images/NoSQLTypes.png">
+<img width="700" vspace="20" src="../images/NoSQLTypes.png">
 </p>
 
 ## Chave-Valor (*Key-Value*)
@@ -13,7 +13,7 @@ Bancos de dados chave-valor são geralmente implementados usando tabelas hash e 
 Alguns dos bancos de dados NoSQL do tipo chave-valor mais populares atualmente são [BerkeleyDB](http://www.oracle.com/us/products/database/berkeley-db), [DynamoDB](http://aws.amazon.com/dynamodb), [HamsterDB](http://hamsterdb.com/), [MemcachedDB](http://memcached.org/), [Redis](http://redis.io/), [Riak](http://wiki.basho.com/Riak.html), e [Voldemort](http://project-voldemort.com/), uma versão de código aberto do DynamoDB.
 
 <p align="center">
-<img width="500" vspace="20" src="images/KeyValue.png">
+<img width="500" vspace="20" src="../images/KeyValue.png">
 </p>
 
 ## Documento (*Document*)
@@ -21,7 +21,7 @@ Alguns dos bancos de dados NoSQL do tipo chave-valor mais populares atualmente s
 Este tipo de banco de dados armazena e recupera documentos de diferentes formatos, tais como XML, JSON, BSON, dentre outros. Esses documentos são organizados em uma estrutura hierárquica em árvore, podendo armazenar dados como mapas, coleções e valores escalares. Os documentos armazenados são geralmente semelhantes entre si, mas não necessariamente precisam ser iguais. No exemplo abaixo, o documento *Document 3* armazena os valores escalares *id*, *isActive* e *dob* e o valor *fullName* composto dos valores escalares *first* e *last*. Alguns dos bancos de dados NoSQL do tipo documento mais populares são [CouchDB](http://couchdb.apache.org/), [MongoDB](http://www.mongodb.org/), [OrientDB](http://www.orientdb.org/), [RavenDB](http://ravendb.net/) e [Terrastore](http://code.google.com/p/terrastore).
 
 <p align="center">
-<img width="500" vspace="20" src="images/Document.png">
+<img width="500" vspace="20" src="../images/Document.png">
 </p>
 
 ## Coluna (*Wide-Column* / *Column-Family*)
@@ -29,7 +29,7 @@ Este tipo de banco de dados armazena e recupera documentos de diferentes formato
 Bancos de dados de famílias de colunas armazenam dados em famílias de colunas como linhas que possuem muitas colunas associadas com uma chave de linha. Famílias de colunas são grupos de dados relacionados que são frequentemente acessados conjuntamente. No exemplo apresentado abaixo o valor de chave *1234* está associado a duas famílias de colunas, *profile* e *orders*. A família de colunas *profile* possui um conjunto de pares chave-valor, composto pelas chaves *name*, *billingAddress* e *payment* e seus respectivos valores. Alguns dos bancos de dados NoSQL do tipo documento mais populares são [Cassandra](http://cassandra.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb), [HBase](http://hbase.apache.org/) e [Hypertable](http://hypertable.org/).
 
 <p align="center">
-<img width="500" vspace="20" src="images/ColumnFamily.png">
+<img width="500" vspace="20" src="../images/ColumnFamily.png">
 </p>
 
 ## Grafo (*Graph*)
@@ -38,7 +38,7 @@ Bancos de dados orientados a grafos permitem armazenar entidades (nós) e relaci
 Alguns dos bancos de dados orientados a grafos mais populares são [FlockDB](https://github.com/twitter/flockdb/), [Infinite Graph](http://www.infinitegraph.com/), [Neo4J](http://neo4j.org/) e [OrientDB](http://www.orientdb.org/).
 
 <p align="center">
-<img width="500" vspace="20" src="images/Graph.png">
+<img width="500" vspace="20" src="../images/Graph.png">
 </p>
 
 # Refer&ecirc;ncias

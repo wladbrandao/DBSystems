@@ -5,7 +5,7 @@
 Os nós Redis encontram-se configurados numa arquitetura mestre-escravo, o que confere à solução baixa latência e alto desempenho, especialmente em modo de comunicação assíncrona. A solução Redis garante alta disponibilidade a partir do uso do recurso [Redis Sentinel](https://redis.io/topics/sentinel) que provê um mecanismo de monitoramento, notificação e recuperação automática em caso de falhas pela promoção de nós escravos a mestres.
 
 <p align="center">
-<img width="700" vspace="20" src="images/redisarch.png">
+<img width="700" vspace="20" src="../images/redisarch.png">
 </p>
 
 Além disso, o recurso [Redis Cluster](https://redis.io/topics/cluster-tutorial) oferece fragmentação por um mecanismo denominado *hash slot*, em que cada nó está associado e se torna responsável por um conjunto de *hash slots* diferentes. Por exemplo, se um nó contém *hash slots* numerados de *0* a *5500*, outro nó conterá um conjunto de *hash slots* distintos, como *5501* a *11000*.
@@ -15,7 +15,7 @@ Outro aspecto importante da solução Redis é a implementação do conceito de 
 Os recursos supra descritos, bem como uma infinidade de outros recursos disponíveis na solução Redis, fazem dela uma solução efetiva para *cache*, *message broker* e armazenamento transitório de grandes volumes de dados agregados.
 
 <p align="center">
-<img width="700" vspace="20" src="images/rediscache.png">
+<img width="700" vspace="20" src="../images/rediscache.png">
 </p>
 
 # Refer&ecirc;ncias

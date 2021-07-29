@@ -5,7 +5,7 @@
 Por "distribuída" entende-se que a solução Cassandra pode ser executada em várias máquinas, mesmo que aparentemente se apresentando para os usuários como um todo unificado. Os nós comunicam-se por meio do protocolo [gossip](https://en.wikipedia.org/wiki/Gossip_protocol) \[[2](#Demers-1987-PODC)\] numa arquitetura ponto-a-ponto, conferindo à solução robustez e resiliência. Vários nós podem ser organizados logicamente em um "anel" (*ring*), sendo possível a configuração de vários *datacenters* diferentes.
 
 <p align="center">
-<img width="700" vspace="20" src="images/cassandra.jpg">
+<img width="700" vspace="20" src="../images/cassandra.jpg">
 </p>
 
 Por ser baseado em nós, o Cassandra oferece escalabilidade horizontal linear (*scale-up* e *scale-down*) usando computadores de baixo custo. Para dobrar a capacidade de armazenamento ou a taxa de transferência de dados basta dobrar o número de nós. Cassandra também oferece fragmentação por particionamento hash, ou seja, os dados são segmentados em múltiplos nós a partir do uso de uma [função hash](https://en.wikipedia.org/wiki/Hash_function) para a escolha do nó que receberá o dado. Tal recurso de particionamento oferece robustez e eficiência computacional em operações de leitura e escrita de dados.

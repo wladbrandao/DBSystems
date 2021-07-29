@@ -8,7 +8,7 @@ Nesta seção são apresentadas as principais características dos bancos de dad
 Agregado é um termo com origem no campo de Projeto Dirigido por Domínio (*Domain-Driven Design*) \[[2](#Evans-2004-BOOK)\], remetendo a uma coleção de objetos relacionados tratados como uma unidade, um bloco único de objetos. Em particular, é uma unidade para manipulação de dados e gerenciamento de consistência.
 
 <p align="center">
-<img width="700" vspace="20" src="images/aggregate.png">
+<img width="700" vspace="20" src="../images/aggregate.png">
 </p>
 
 O modelo relacional divide dados em tuplas, ou linhas em um estrutura tabular limitada que não permite aninhamento de tuplas ou mesmo a colocação de uma lista de valores ou tuplas dentro de outra. Já a orientação por agregados adota uma abordagem diferente, reconhecendo que muitas vezes os dados precisam ser tratados como unidades que possuem uma estrutura mais complexa do que um conjunto de tuplas.
@@ -29,7 +29,7 @@ A orientação por agregados é adequada para obtenção de escalabilidade uma v
 os benefícios sejam atraentes.
 
 <p align="center">
-<img width="700" vspace="20" src="images/distributed.png">
+<img width="700" vspace="20" src="../images/distributed.png">
 </p>
 
 De forma geral, existem duas estratégias para a distribuição de dados: replicação (*replication*) e fragmentação (*sharding*). A replicação copia o mesmo conjunto de dados em vários nós. A fragmentação distribui dados diferentes em nós diferentes. Replicação e fragmentação são técnicas ortogonais, podendo-se usar uma ou ambas. A replicação pode ser implementada de duas formas, numa arquitetura mestre-escravo ou ponto a ponto. Basicamente, do mais simples para o mais complexo pode-se ter uma arquitetura de servidor único, replicação mestre-escravo, fragmentação e, replicação ponto a ponto.
@@ -41,13 +41,13 @@ A obtenção de consistência de dados pressupõe o sacrifício de outras caract
 O teorema CAP é geralmente usado como justificativa para a necessidade de relaxamento da consistência. A afirmação básica do teorema CAP é que, dadas três propriedades, consistência (*Consistency*), disponibilidade (*Availability*) e tolerância de partição (*Partition tolerance*), um sistema só pode obter duas dessas propriedades. Na figura abaixo observa-se que enquanto os sistemas gerenciadores de banco de dados relacionais garantem consistência e disponibilidade, não garantem tolerância de partição, enquanto alguns sistemas de banco de dados NoSQL, como *HBase*, *MongoDB* e *Redis* garantem consistência e tolerância de partição, mas não garantem disponibilidade.
 
 <p align="center">
-<img width="500" vspace="20" src="images/cap02.png">
+<img width="500" vspace="20" src="../images/cap02.png">
 </p>
 
 Por consistência entenda-se a capacidade do sistema evitar que erros ocorram, em particular erros de leitura e escrita acidental de dados indesejados. Mais especificamente, todos os nós de um *cluster* computacional enxergam o mesmo dado no mesmo instante de tempo. Por disponibilidade entenda-se a capacidade de um nó ativo de um *cluster* computacional ler e gravar dados. Mais especificamente, requisições válidas de dados são sempre respondidas por um nó. E por tolerância de partição entenda-se a capacidade do *cluster* computacional se manter ativo em caso de falhas de comunicação. Mais especificamente, falhas de comunicação não impedem a troca de mensagens entre os nós.
 
 <p align="center">
-<img width="700" vspace="20" src="images/cap01.png">
+<img width="700" vspace="20" src="../images/cap01.png">
 </p>
 
 ## Versionamento de Dados
@@ -69,7 +69,7 @@ O padrão *map-reduce* é uma maneira de organizar
 processamento de forma a tirar proveito de várias máquinas em *cluster*. Uma implementação de código aberto amplamente usada faz parte do projeto *Hadoop*. De forma sucinta, o primeiro estágio de processamento utilizando o padrão é o *map*, uma função cuja entrada é um único agregado e cuja saída é um conjunto de pares chave-valor. Cada aplicação da função é independente uma das outras, o que permite que cada uma delas seja  paralelizável, resultando em alto desempenho oriundo dos benefícios da localidade de acesso aos dados. Diversos nós podem executar funções *map* gerando saídas simples que são combinadas no estágio *reduce*.
 
 <p align="center">
-<img width="700" vspace="20" src="images/mapreduce.png">
+<img width="700" vspace="20" src="../images/mapreduce.png">
 </p>
 
 No exemplo acima, diversas aplicações de função *map* são executadas em nós diferentes gerando pares chave-valor que são combinados na sequência por funções *reduce* que ao fim do processamento geram um único conjunto de dados combinados.

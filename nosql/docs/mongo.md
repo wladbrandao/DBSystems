@@ -5,13 +5,13 @@
 Os nós MongoDB encontram-se configurados numa [arquitetura](https://docs.mongodb.com/manual/replication/) mestre-escravo, em que requisições de escrita são processadas por um nó primário (mestre) e requisições de leitura podem ser processadas tanto pelo nó primário, quanto por nós secundários (escravos contendo réplicas dos dados), o que confere à solução alto desempenho, especialmente para leitura de dados, e tolerância a falhas derivada do mecanismo de replicação.
 
 <p align="center">
-<img width="500" vspace="20" src="images/mongodbreplication.png">
+<img width="500" vspace="20" src="../images/mongodbreplication.png">
 </p>
 
 O recurso de replicação assíncrona presente no MongoDB aliado ao recurso de fragmentação de dados para escalonamento horizontal torna esta solução ainda mais eficiente, provendo baixa latência e alto desempenho. Um diferencial importante no mecanismo de fragmentação utilizado pelo MongoDB é que o particionamento de dados entre nós não é determinado por funções hash, mas por [*shard keys*](https://docs.mongodb.com/manual/core/sharding-shard-key/), ou conjuntos contínuos (*chunks*) de atributos indexados. Tal mecanismo de particionamento torna ainda mais efetiva a recuperação de dados.
 
 <p align="center">
-<img width="700" vspace="20" src="images/mongodbshard.png">
+<img width="700" vspace="20" src="../images/mongodbshard.png">
 </p>
 
 A solução MongoDB também implementa o conceito de [transação](https://docs.mongodb.com/manual/core/transactions/) que possibilita a execução de um grupo de operações de leitura e escrita sobre diversos documentos diferentes como um único bloco lógico de execução, obviamente demandando mecanismos de controle de concorrência. Além disso, MongoDB suporta diferentes mecanismos de armazenamento (*in-memory* e *in-disk*), garantindo diferentes níveis de latência e persistência.

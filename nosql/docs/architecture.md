@@ -14,7 +14,7 @@ Freqüentemente, um banco de dados tem sua disponibilidade comprometida porque d
 servidores diferentes, uma técnica denominada fragmentação, faz todo sentido para oferecer suporte à escalabilidade horizontal. Assim, o volume de requisições e processamento é distribuído entre os nós, diminuindo a pressão por processamento em um único nó específico.
 
 <p align="center">
-<img width="700" vspace="20" src="images/sharding.png">
+<img width="700" vspace="20" src="../images/sharding.png">
 </p>
 
 A fragmentação é particularmente eficiente para operações de escrita no banco de dados, uma vez que os dados são fragmentados e escritos paralelamente em nós diferentes. Entretanto a fragmentação pouco contribui para a resiliência (capacidade de tolerância a falhas) do sistema, uma vez que parte dos dados ficará indisponível caso o nó que armazene os dados se torne indisponível.
@@ -24,7 +24,7 @@ A fragmentação é particularmente eficiente para operações de escrita no ban
 A replicação de dados oferece resiliência, uma vez que os dados são replicados entre múltiplos nós e a indisponibilidade de um deles não compromete a disponibilidade geral do sistema. Numa replicação mestre-escravo, um nó é designado como mestre, ou primário, e os outros são designados como escravos, ou secundários, cabendo ao nó mestre a autoridade sobre os dados, processando todas as requisições de atualização.
 
 <p align="center">
-<img width="700" vspace="20" src="images/master-slave.png">
+<img width="700" vspace="20" src="../images/master-slave.png">
 </p>
 
 Como pode-se observar na figura acima, a replicação mestre-escravo é extremamente efetiva para escalabilidade em bancos de dados de leitura intensiva, oferecendo resiliência de leitura, mas sendo menos efetiva em casos de escrita intensiva, pelo fato da escrita ser de responsabilidade exclusiva do nó mestre.
@@ -34,7 +34,7 @@ Como pode-se observar na figura acima, a replicação mestre-escravo é extremam
 A replicação mestre-escravo é útil para escalabilidade de leitura, mas pouco útil para escalabilidade de escrita, provendo resiliência em caso de falhas de nós escravos, mas nenhuma resiliência em caso de falha do nó mestre. Numa replicação ponto-a-ponto todos os nós tem autoridade sobre seus dados processando tanto requisições de leitura quanto de escrita.
 
 <p align="center">
-<img width="700" vspace="20" src="images/p2p.png">
+<img width="700" vspace="20" src="../images/p2p.png">
 </p>
 
 Do ponto de vista de resiliência, essa configuração apresenta desempenho excelente, mas o grande desafio é manter a consistência. Ao se escrever em dois lugares diferentes, corre-se o risco de que duas pessoas tentem atualizar o mesmo registro ao mesmo tempo, um conflito escrita-escrita. Inconsistências na leitura levam a problemas, mas pelo menos são relativamente transitórios. As escritas inconsistentes duram para sempre. Para solucionar tais problemas de consistência a replicação ponto-a-ponto utiliza técnicas de controle de versionamento de dados mais complexas, tornando o processamento de dados menos eficiente.
@@ -45,7 +45,7 @@ Para obtenção do balanceamento entre resiliência oferecida pela replicação 
 Enquanto a combinação de fragmentação e replicação ponto-a-ponto são muito comuns em bancos de dados NoSQL orientados por colunas, a combinação de fragmentação e replicação mestre-escravo é mais comum em bancos de dados NoSQL orientados por documentos ou chave-valor.
 
 <p align="center">
-<img width="500" vspace="20" src="images/replshard.png">
+<img width="500" vspace="20" src="../images/replshard.png">
 </p>
 
 # Refer&ecirc;ncias
