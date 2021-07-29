@@ -6,7 +6,7 @@ Nesta seção são apresentados os principais termos e respectivos conceitos rel
 ## Do Dado à Sabedoria
 
 <p align="center">
-<img width="700" vspace="20" src="images/Data2Wisdom.jpg">
+<img width="700" vspace="20" src="../images/Data2Wisdom.jpg">
 </p>
 
 - **DADO:** Conjunto de símbolos, sinais ou códigos decifráveis ou não;
