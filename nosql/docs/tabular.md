@@ -32,5 +32,8 @@ Nesse contexto, modelos de dados que proporcionem flexibilidade na definição d
 
 <a name="Elmasri-2016-BOOK"></a>\[[2][2]\] Ramez Elmasri, Shamkant B. Navathe. Fundamentals of database systems. 7ed. Pearson, 2016.
 
+<a name="Sadalage-2013-BOOK"></a>\[[3][3]\] Pramod J. Sadalage, Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. 1ed. Pearson, 2013.
+
 [1]: https://doi.org/10.1145%2F362384.362685
 [2]: https://www.pearson.com/us/higher-education/program/Elmasri-Fundamentals-of-Database-Systems-7th-Edition/PGM189052.html
+[3]: https://doi.org/10.5555/2381014
