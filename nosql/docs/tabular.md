@@ -14,19 +14,13 @@ A figura acima ilustra o modelo de dados relacional adotado por sistemas de banc
 <img width="700" vspace="20" src="../images/relationalschema.png">
 </p>
 
-O modelo de dados relacional oferece simplicidade na organização de dados e, em conjunto com uma linguagem de consulta formal igualmente simples ([SQL](https://en.wikipedia.org/wiki/SQL)), fornecem um mecanismo robusto e seguro para armazenamento de dados tabulares simples ou multidimensionais, e de natureza permanente (alta persistência), como no caso de sistemas transacionais ([OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing)) e analíticos ([OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing)).
-
-<p align="center">
-<img width="500" vspace="20" src="../images/oltp_olap.jpg">
-</p>
-
-Mas apesar de admitir armazenamento persistente, integrado, com controle de concorrência de transações e de redundância de dados que lhes confere propriedades de consistência e disponibilidade, problemas de impedância e de escalabilidade se tornaram limitadores para a adoção de sistemas de bancos de dados para aplicações modernas. Tais sistemas se baseiam em escalabilidade vertical, em que o aumento de poder computacional se dá pela atualização de hardware computacional. Essa escalabilidade vertical é limitada, cara e complexa, comprometendo o desempenho do sistema para armazenamento e processamento de volumes massivos de dados.
+O modelo de dados relacional oferece simplicidade na organização de dados e, em conjunto com uma linguagem de consulta formal igualmente simples ([SQL](https://en.wikipedia.org/wiki/SQL)), fornecem um mecanismo robusto e seguro para armazenamento de dados tabulares simples ou multidimensionais, e de natureza permanente (alta persistência), como no caso de sistemas transacionais ([OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing)) e analíticos ([OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing)). Mas apesar de admitir armazenamento persistente, integrado, com controle de concorrência de transações e de redundância de dados que lhes confere propriedades de consistência e disponibilidade, problemas de impedância e de escalabilidade se tornaram limitadores para a adoção de sistemas de bancos de dados para aplicações modernas. Tais sistemas se baseiam em escalabilidade vertical, em que o aumento de poder computacional se dá pela atualização de hardware computacional. Essa escalabilidade vertical é limitada, cara e complexa, comprometendo o desempenho do sistema para armazenamento e processamento de volumes massivos de dados.
 
 <p align="center">
 <img width="700" vspace="20" src="../images/hvscale.jpg">
 </p>
 
-Nesse contexto, modelos de dados que proporcionem flexibilidade na definição de esquemas de dados, alto desempenho no armazenamento e processamento de volumes massivos de dados com tolerância a falhas e baixa impedância se tornaram fundamentais.
+Nesse contexto, modelos de dados que proporcionem flexibilidade na definição de esquemas de dados, alto desempenho no armazenamento e processamento de volumes massivos de dados com tolerância a falhas e baixa impedância se tornaram fundamentais. Dessa forma, no final da década de 2000 diversas empresas de alta tecnologia, tais como Amazon, Facebook e Google, começaram a desenvolver diferentes modelos de dados e soluções de armazenamento baseados nesses modelos capazes de prover escalabilidade horizontal com baixa impedância, alta disponibilidade e tolerância a falha para armazenamento de grandes volumes de dados (*Big Data*).
 
 <p align="center">
 <img width="700" vspace="20" src="../images/whynosql.png">
