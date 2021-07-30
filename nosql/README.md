@@ -33,8 +33,8 @@ Sistemas de banco de dados NoSQL prov&ecirc;m flexibilidade e alto desempenho no
 ### Outros Recursos
 
 1. [What is NoSQL?](https://aws.amazon.com/nosql/)
-1. [Deep dive into NoSQL: A complete list of NoSQL databases (2014)](https://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
 1. [NoSQL Databases List by Hosting Data (2021)](https://hostingdata.co.uk/nosql-database/)
+1. [Deep dive into NoSQL: A complete list of NoSQL databases (2014)](https://bigdata-madesimple.com/a-deep-dive-into-nosql-a-complete-list-of-nosql-databases/)
 1. [How to Choose the Right NoSQL Database for Your Application? (2018)](https://www.dataversity.net/choose-right-nosql-database-application/)
 
 ## Refer&ecirc;ncias
