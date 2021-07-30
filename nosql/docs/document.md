@@ -6,9 +6,9 @@ Bancos de dados NoSQL baseados em documento (*document*) usam um modelo de dados
 <img width="900" vspace="20" src="../images/doc_relational.png">
 </p>
 
-A figura acima ilustra o modelo de dados documental usado para armazenar pedidos de compra em um sistema de comércio eletrônico. Como pode ser observado na figura, o documento semiestruturado à direita armazena uma coleção hierarquizada de valores de atributos correspondente a um pedido de compra. À esquerda observa-se o mesmo conjunto de dados sendo organizados usando um modelo relacional (tabular).
+A figura acima ilustra o modelo de dados documental usado para armazenar pedidos de compra em um sistema de comércio eletrônico. Como pode ser observado na figura, o documento semiestruturado à direita armazena uma coleção hierarquizada de valores de atributos correspondente a um pedido de compra. À esquerda observa-se o mesmo conjunto de dados sendo organizado usando um modelo relacional (tabular).
 
-O modelo de dados documental oferece flexibilidade na organização de dados de natureza semiestruturada e pode ser implementado de forma muito eficiente, utilizando [estruturas hierárquicas de árvore](https://en.wikipedia.org/wiki/Tree_(data_structure)). Tais características fazem com que os bancos de dados NoSQL baseados nesse modelo de dados sejam muito efetivos para armazenamento de dados (agregados) complexos e de natureza permanente (alta persistência), como no caso de catálogos de itens e de [Sistemas de Gerenciamento de Conteúdo (*CMS - Content Management Systems*)](https://en.wikipedia.org/wiki/Content_management_system).
+O modelo de dados documental oferece flexibilidade na organização de dados de natureza semiestruturada e pode ser implementado de forma muito eficiente, utilizando [estruturas hierárquicas de árvore](https://en.wikipedia.org/wiki/Tree_(data_structure)). Tais características fazem com que os bancos de dados NoSQL baseados nesse modelo de dados sejam muito efetivos para armazenamento de dados (agregados) complexos e de natureza permanente (alta persistência), como no caso de catálogos de itens e de páginas em [Sistemas de Gerenciamento de Conteúdo (*CMS - Content Management Systems*)](https://en.wikipedia.org/wiki/Content_management_system).
 
 # Refer&ecirc;ncias
 

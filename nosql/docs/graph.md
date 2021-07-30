@@ -3,13 +3,13 @@
 Bancos de dados NoSQL baseados em grafo (*graph*) usam um modelo de dados baseado numa estrutura complexa composta por vértices (ou nós) e arestas (ou ligações) que ligam os vértices. Particularmente o modelo de grafo (ou orientado a grafo) permite o armazenamento de relações complexas entre dados sob a forma de um [grafo](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics), facilitando o armazenamento e navegação por dados e relacionamentos complexos. Nessa estrutura, uma aresta está sempre relacionada a um vértice inicial e um vértice final e possui um tipo e um direcionamento, o que possibilita a descrição de relacionamentos entre pais e filhos, entre ações, propriedades e assim por diante. A quantidade e os tipos de relacionamentos que um vértice pode ter são ilimitados.
 
 <p align="center">
-<img width="500" vspace="20" src="../images/graphdef.png">
+<img width="700" vspace="20" src="../images/graphdef.png">
 </p>
 
 Diferentemente de outros modelos de dados, que estabelecem vínculos entre os dados no momento da consulta, no modelo de dados baseado em grafos os vínculos entre os dados são prestabelecidos e persistentes, o que faz com que a busca por relacionamentos entre os dados seja muito efetiva. Por exemplo, considerando o grafo apresentado na figura abaixo, a busca por todos os relacionamentos de amizade existentes entre empregados de alguma empresa é muito efetiva e envolve a simples identificação de arestas do tipo *friend* e *employer* no grafo, ao passo que em um modelo relacional tipicamente requereria a varredura e junção de múltiplas tabelas.
 
 <p align="center">
-<img width="500" vspace="20" src="../images/Graph.png">
+<img width="700" vspace="20" src="../images/Graph.png">
 </p>
 
 A figura acima ilustra o modelo de dados orientado a grafo usado para armazenar relacionamentos entre empresas, pessoas, obras literárias e categorias de conhecimento. Em particular, observa-se que as pessoas *martin* (vértice) e *pramod* (vértice) são mutuamente amigas, uma vez que possuem uma aresta *friend* bidirecional entre elas, e também são coautoras da obra literária *NoSQL Distilled* (vértice), uma vez que cada uma possui uma aresta *author* unidirecional que as ligam com a obra. Observa-se também que a obra literária *NoSQL Distilled* (vértice) pertence à categoria  *Databases* (vértice), uma vez que possuem uma aresta *category* unidirecional entre si.
