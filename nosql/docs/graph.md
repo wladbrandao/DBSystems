@@ -1,60 +1,26 @@
-# NoSQL: Tipos
+# NoSQL: Modelo de Grafo
 
-Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, incluindo os bancos de dados orientados a documentos (**document store**), chave-valor (**key-value store**), orientados a colunas (**wide column store**) e os baseados em grafos (**graph store**).
-
-<p align="center">
-<img width="700" vspace="20" src="../images/NoSQLTypes.png">
-</p>
-
-## Chave-Valor (*Key-Value*)
-
-Bancos de dados chave-valor são geralmente implementados usando tabelas hash e são muito eficientes quando o acesso aos dados (valores) são efetuados exclusivamente por uma chave (primária). Os valores associados a cada chave podem assumir qualquer valor blob (*binary object*). No exemplo abaixo, o valor associado à chave *2398240* contém uma string de valor *Lorem ipsum dolor sit amet*, enquanto o valor associado à chave *2398242* contém o valor numérico *42*.
-
-Alguns dos bancos de dados NoSQL do tipo chave-valor mais populares atualmente são [BerkeleyDB](http://www.oracle.com/us/products/database/berkeley-db), [DynamoDB](http://aws.amazon.com/dynamodb), [HamsterDB](http://hamsterdb.com/), [MemcachedDB](http://memcached.org/), [Redis](http://redis.io/), [Riak](http://wiki.basho.com/Riak.html), e [Voldemort](http://project-voldemort.com/), uma versão de código aberto do DynamoDB.
+Bancos de dados NoSQL baseados em grafo (*graph*) usam um modelo de dados baseado numa estrutura complexa composta por vértices (ou nós) e arestas (ou ligações) que ligam os vértices. Particularmente o modelo de grafo (ou orientado a grafo) permite o armazenamento de relações complexas entre dados sob a forma de um [grafo](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics), facilitando o armazenamento e navegação por dados e relacionamentos complexos. Nessa estrutura, uma aresta está sempre relacionada a um vértice inicial e um vértice final e possui um tipo e um direcionamento, o que possibilita a descrição de relacionamentos entre pais e filhos, entre ações, propriedades e assim por diante. A quantidade e os tipos de relacionamentos que um vértice pode ter são ilimitados.
 
 <p align="center">
-<img width="500" vspace="20" src="../images/KeyValue.png">
+<img width="500" vspace="20" src="../images/graphdef.png">
 </p>
 
-## Documento (*Document*)
-
-Este tipo de banco de dados armazena e recupera documentos de diferentes formatos, tais como XML, JSON, BSON, dentre outros. Esses documentos são organizados em uma estrutura hierárquica em árvore, podendo armazenar dados como mapas, coleções e valores escalares. Os documentos armazenados são geralmente semelhantes entre si, mas não necessariamente precisam ser iguais. No exemplo abaixo, o documento *Document 3* armazena os valores escalares *id*, *isActive* e *dob* e o valor *fullName* composto dos valores escalares *first* e *last*. Alguns dos bancos de dados NoSQL do tipo documento mais populares são [CouchDB](http://couchdb.apache.org/), [MongoDB](http://www.mongodb.org/), [OrientDB](http://www.orientdb.org/), [RavenDB](http://ravendb.net/) e [Terrastore](http://code.google.com/p/terrastore).
-
-<p align="center">
-<img width="500" vspace="20" src="../images/Document.png">
-</p>
-
-## Coluna (*Wide-Column* / *Column-Family*)
-
-Bancos de dados de famílias de colunas armazenam dados em famílias de colunas como linhas que possuem muitas colunas associadas com uma chave de linha. Famílias de colunas são grupos de dados relacionados que são frequentemente acessados conjuntamente. No exemplo apresentado abaixo o valor de chave *1234* está associado a duas famílias de colunas, *profile* e *orders*. A família de colunas *profile* possui um conjunto de pares chave-valor, composto pelas chaves *name*, *billingAddress* e *payment* e seus respectivos valores. Alguns dos bancos de dados NoSQL do tipo documento mais populares são [Cassandra](http://cassandra.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb), [HBase](http://hbase.apache.org/) e [Hypertable](http://hypertable.org/).
-
-<p align="center">
-<img width="500" vspace="20" src="../images/ColumnFamily.png">
-</p>
-
-## Grafo (*Graph*)
-
-Bancos de dados orientados a grafos permitem armazenar entidades (nós) e relacionamentos (arestas) entre essas entidades, bem como suas propriedades. Arestas podem ser direcionais e tipificadas. No exemplo abaixo, os nós *BigCo* e *Anna* estão relacionadas pela aresta *employer*. A direção da aresta representa que o nó *Anna* é empregado do nó *BigCo*, mas o nó *BigCo* não é empregado do nó *Anna*.
-Alguns dos bancos de dados orientados a grafos mais populares são [FlockDB](https://github.com/twitter/flockdb/), [Infinite Graph](http://www.infinitegraph.com/), [Neo4J](http://neo4j.org/) e [OrientDB](http://www.orientdb.org/).
+Diferentemente de outros modelos de dados, que estabelecem vínculos entre os dados no momento da consulta, no modelo de dados baseado em grafos os vínculos entre os dados são prestabelecidos e persistentes, o que faz com que a busca por relacionamentos entre os dados seja muito efetiva. Por exemplo, considerando o grafo apresentado na figura abaixo, a busca por todos os relacionamentos de amizade existentes entre empregados de alguma empresa é muito efetiva e envolve a simples identificação de arestas do tipo *friend* e *employer* no grafo, ao passo que em um modelo relacional tipicamente requereria a varredura e junção de múltiplas tabelas.
 
 <p align="center">
 <img width="500" vspace="20" src="../images/Graph.png">
 </p>
 
+A figura acima ilustra o modelo de dados orientado a grafo usado para armazenar relacionamentos entre empresas, pessoas, obras literárias e categorias de conhecimento. Em particular, observa-se que as pessoas *martin* (vértice) e *pramod* (vértice) são mutuamente amigas, uma vez que possuem uma aresta *friend* bidirecional entre elas, e também são coautoras da obra literária *NoSQL Distilled* (vértice), uma vez que cada uma possui uma aresta *author* unidirecional que as ligam com a obra. Observa-se também que a obra literária *NoSQL Distilled* (vértice) pertence à categoria  *Databases* (vértice), uma vez que possuem uma aresta *category* unidirecional entre si.
+
+O modelo de dados orientado a grafo oferece flexibilidade na organização de dados de natureza relacional complexa e pode ser implementado de forma muito eficiente, utilizando estruturas de dados específicas para representação de grafos, como [lista e matriz de adjacência](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)). Tais características fazem com que os bancos de dados NoSQL baseados nesse modelo de dados sejam muito efetivos para armazenamento de dados relacionais (agregados) complexos e de natureza permanente (alta persistência), como no caso de [redes sociais](https://en.wikipedia.org/wiki/Social_networking_service), mecanismos de [recomendação](https://en.wikipedia.org/wiki/Recommender_system) e [detecção de fraudes](https://en.wikipedia.org/wiki/Data_analysis_techniques_for_fraud_detection), em que é necessário criar relacionamentos entre os dados e consultar rapidamente tais relacionamentos.
+
 # Refer&ecirc;ncias
 
 <a name="Sadalage-2013-BOOK"></a>\[[1][1]\] Pramod J. Sadalage, Martin Fowler. NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence. 1ed. Pearson, 2013.
 
-<a name="Fowler-2012-VIDEO01"></a>\[[2][2]\] Martin Fowler. Introduction to NoSQL: Key-value data model, 2012.
-
-<a name="Fowler-2012-VIDEO02"></a>\[[3][3]\] Martin Fowler. Introduction to NoSQL: Document data model, 2012.
-
-<a name="Fowler-2012-VIDEO03"></a>\[[4][4]\] Martin Fowler. Introduction to NoSQL: Column-family data model, 2012.
-
-<a name="Fowler-2012-VIDEO04"></a>\[[5][5]\] Martin Fowler. Introduction to NoSQL: Graph data model, 2012.
+<a name="Fowler-2012-VIDEO"></a>\[[2][2]\] Martin Fowler. Introduction to NoSQL: Graph data model, 2012.
 
 [1]: https://doi.org/10.5555/2381014
-[2]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=604s
-[3]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=637s
-[4]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1056s
-[5]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1220s
+[2]: https://www.youtube.com/watch?v=qI_g07C_Q5I&t=1220s
