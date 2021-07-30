@@ -3,7 +3,7 @@
 Bancos de dados NoSQL baseados em documento (*document*) usam um modelo de dados baseado numa estrutura complexa composta por uma hierarquia de documentos semiestruturados para organização dos dados no banco de dados. Particularmente o modelo documental (ou orientado a documento) permite o armazenamento de documentos em diferentes formatos, como [XML](https://en.wikipedia.org/wiki/XML) ou [JSON](https://en.wikipedia.org/wiki/JSON), de forma flexível deixando que os documentos evoluam livremente e independentemente uns dos outros conforme a necessidade da aplicação, podendo armazenar dados como mapas, coleções e valores escalares.
 
 <p align="center">
-<img width="500" vspace="20" src="../images/doc_relational.png">
+<img width="900" vspace="20" src="../images/doc_relational.png">
 </p>
 
 A figura acima ilustra o modelo de dados documental usado para armazenar pedidos de compra em um sistema de comércio eletrônico. Como pode ser observado na figura, o documento semiestruturado à direita armazena uma coleção hierarquizada de valores de atributos correspondente a um pedido de compra. À esquerda observa-se o mesmo conjunto de dados sendo organizados usando um modelo relacional (tabular).
