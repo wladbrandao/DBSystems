@@ -22,11 +22,11 @@ A fragmentação (*sharding*) e replicação (*replication*) de dados obtidos nu
 
 ## Flexibilidade
 
-Bancos de dados relacionais armazenam dados em tabelas estruturadas que possuem um esquema rígido predefinido. Para usar esse tipo de solução, um modelo de dados relacional deve ser projetado antes mesmo dos dados serem transformados e carregados no banco de dados. Ao serem usados ​​em aplicações, os dados devem ser recuperados usando SQL e sua estrutura deve ser adaptada à estrutura usada na aplicação. Da mesma forma, quando os dados são gravados de volta, eles devem ser transformados novamente na estrutura de tabelas relacionais.
+Bancos de dados relacionais armazenam dados em tabelas estruturadas que possuem um esquema rígido predefinido. Para usar esse tipo de solução um modelo de dados relacional deve ser projetado antes mesmo dos dados serem transformados e carregados no banco de dados. Ao serem usados ​​em aplicações os dados devem ser recuperados usando SQL e sua estrutura deve ser adaptada à estrutura usada na aplicação. Da mesma forma, quando os dados são gravados de volta, eles devem ser transformados novamente na estrutura de tabelas relacionais.
 
-Já os bancos de dados NoSQL têm se mostrado populares porque permitem que os dados sejam armazenados de maneiras mais flexível, ou seja mais fáceis de se transformar ou mais próximas da forma como os dados são usados pelas aplicações. Sendo assim, menos transformações são necessárias quando os dados são armazenados ou recuperados para uso. Sejam os dados estruturados, não estruturados ou semiestruturados, eles podem ser armazenados e recuperados mais facilmente, o que torna o trabalho de um desenvolvedor de aplicações mais produtivo.
+Já os bancos de dados NoSQL têm se mostrado populares porque permitem que os dados sejam armazenados de maneiras mais flexível, ou seja, mais fáceis de se transformar ou mais próximos da forma como os dados são usados pelas aplicações. Sendo assim, menos transformações são necessárias quando os dados são armazenados ou recuperados para uso. Sejam os dados estruturados, não estruturados ou semiestruturados, eles podem ser armazenados e recuperados mais facilmente, o que torna o trabalho de um desenvolvedor de aplicações mais produtivo.
 
-Além disso, os esquemas de muitos bancos de dados NoSQL são flexíveis e estão sob o controle dos desenvolvedores, facilitando a adaptação do banco de dados a novas formas de dados. Isso remove gargalos no processo de desenvolvimento associados ao pedido de um administrador de banco de dados para reprojetar um banco de dados relacional.
+Além disso, os esquemas de muitos bancos de dados NoSQL são flexíveis e estão sob o controle dos desenvolvedores, facilitando a adaptação do banco de dados a novas formas de organização de dados. Isso remove gargalos no processo de desenvolvimento associados ao pedido de um administrador de banco de dados para reprojetar um banco de dados relacional.
 
 ## Tolerância a Falhas
 
@@ -36,13 +36,13 @@ Já em uma arquitetura horizontal com replicação, a indisponibilidade de um n�
 
 ## Poliglotismo (*Polyglot Persistence*)
 
-Problemas de naturezas diferentes requerem soluções de armazenamento diferentes e tentar usar uma única solução de banco de dados para todos os problemas tipicamente resulta em baixo desempenho. O armazenamento de dados transacionais, o *cache*
+Problemas de natureza diferentes requerem soluções de armazenamento diferentes, e tentar usar uma única solução de banco de dados para todos os problemas tipicamente resulta em baixo desempenho. O armazenamento de dados transacionais, o *cache*
 de sessões de usuário, percorrer caminhos em grafos para encontrar itens correlacionados a outros são
 problemas essencialmente diferentes e a utilização de uma mesma solução de armazenamento não parece ser uma decisão inteligente. Mesmo os requisitos de um processamento transacional (OLTP) ou analítico (OLAP), que geralmente demandam bancos de dados relacionais, podem ser muito diferentes.
 
 Aplicações complexas combinam diferentes tipos de problemas, sendo que um mesmo problema pode requerer diferentes mecanismos de armazenamento, cada um capaz de lidar com diferentes subproblemas. Dessa forma, escolher a solução de armazenamento correta para cada subproblema pode ser mais produtivo do que tentar encaixar todos os subproblemas em uma única solução de armazenamento.
 
-Bancos de dados NoSQL oferecem uma miríade de soluções de armazenamento capazes de lidar com problemas de naturezas diferentes que demandem por exemplo o armazenamento de pares de valores, documentos ou grafos, o que enriquece as opções disponíveis para além da escolha de uma opção relacional única para toda sorte de problema.
+Bancos de dados NoSQL oferecem uma miríade de soluções de armazenamento capazes de lidar com problemas de naturezas diferentes que demandem por exemplo o armazenamento de pares chave-valor, documentos ou grafos, o que enriquece as opções disponíveis para além da escolha de uma opção relacional única para toda sorte de problema.
 
 # Refer&ecirc;ncias
 
