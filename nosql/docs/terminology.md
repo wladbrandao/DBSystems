@@ -20,7 +20,7 @@ Um **sistema de banco de dados** é constituído por bancos de dados, um modelo 
 <img width="700" vspace="20" src="../images/sql_nosql.png">
 </p>
 
-Um **sistema de banco de dados NoSQL** refere-se a toda solução de armazenamento de dados de baixa impedância e alto desempenho que não faz uso do modelo relacional para armazenamento de volumes massivos de dados. Muitas dessas soluções operam em *cluster* computacional e sem um esquema de dados predefinido, conferindo-lhes alta disponibilidade e tolerância a falhas. **Big Data** é um termo genérico utilizado para descrever um volume massivo de dados multivariados e de alta dimensionalidade, comumente gerados em tempo real com velocidade de crescimento exponencial.
+Um **sistema de banco de dados NoSQL** refere-se a toda solução de armazenamento de dados de baixa impedância e alto desempenho que não faz uso do modelo relacional para armazenamento de volumes massivos de dados. Muitas dessas soluções operam em *cluster* computacional e sem um esquema de dados predefinido, conferindo-lhes alta disponibilidade e tolerância a falhas. **Big Data** é um termo genérico utilizado para descrever volumes massivos de dados multivariados e de alta dimensionalidade, comumente gerados em tempo real com velocidade de crescimento exponencial.
 
 # Refer&ecirc;ncias
 
