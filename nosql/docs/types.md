@@ -1,6 +1,6 @@
 # NoSQL: Tipos
 
-Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, incluindo os bancos de dados orientados a documentos (**document store**), chave-valor (**key-value store**), orientados a colunas (**wide column store**) e os baseados em grafos (**graph store**).
+Nesta seção são apresentados os principais tipos de bancos de dados NoSQL, incluindo os bancos de dados chave-valor (**key-value store**), orientados a documento (**document store**), orientados a coluna (**wide column store**) e orientados a grafo (**graph store**).
 
 <p align="center">
 <img width="700" vspace="20" src="../images/NoSQLTypes.png">
@@ -34,7 +34,7 @@ Bancos de dados de famílias de colunas armazenam dados em famílias de colunas 
 
 ## Grafo (*Graph*)
 
-Bancos de dados orientados a grafos permitem armazenar entidades (nós) e relacionamentos (arestas) entre essas entidades, bem como suas propriedades. Arestas podem ser direcionais e tipificadas. No exemplo abaixo, os nós *BigCo* e *Anna* estão relacionadas pela aresta *employer*. A direção da aresta representa que o nó *Anna* é empregado do nó *BigCo*, mas o nó *BigCo* não é empregado do nó *Anna*.
+Bancos de dados orientados a grafo permitem armazenar entidades (nós) e relacionamentos (arestas) entre essas entidades, bem como suas propriedades. Arestas podem ser direcionais e tipificadas. No exemplo abaixo, os nós *BigCo* e *Anna* estão relacionadas pela aresta *employer*. A direção da aresta representa que o nó *Anna* é empregado do nó *BigCo*, mas o nó *BigCo* não é empregado do nó *Anna*.
 Alguns dos bancos de dados orientados a grafos mais populares são [FlockDB](https://github.com/twitter/flockdb/), [Infinite Graph](http://www.infinitegraph.com/), [Neo4J](http://neo4j.org/) e [OrientDB](http://www.orientdb.org/).
 
 <p align="center">
